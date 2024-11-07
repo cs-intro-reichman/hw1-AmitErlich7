@@ -9,7 +9,7 @@ public class Ascend {
 		int maxNum = Math.max(a, Math.max(b, c));
 		int minNum = Math.min(a, Math.min(b, c));
 		int midNum = a + b + c - maxNum - minNum; 
-		System.out.println(maxNum + " , " + midNum + " , " + minNum);
+		System.out.println(minNum + " , " + midNum + " , " + maxNum);
 		
 		
 	}
