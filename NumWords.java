@@ -2,30 +2,14 @@
 public class NumWords {
 	public static void main(String args[]) {
 	    int number = Integer.parseInt(args[0]);
-
-		while (number > 0) {
-			if (number > 100) {
-				String numberString = Integer.toString(number);
-				char firstDigit = numberString.charAt(0);
-				System.out.println(firstDigit + " hundreds");	
-				numberString = numberString.substring(1);
-				number = Integer.parseInt(numberString);
-			}
-			if (number > 10) {
-				String numberString = Integer.toString(number);
-				char firstDigit = numberString.charAt(0);
-				System.out.println(firstDigit + " tens");	
-				numberString = numberString.substring(1);
-				number = Integer.parseInt(numberString);
-			}
-			if (number > 1) {
-				String numberString = Integer.toString(number);
-				char firstDigit = numberString.charAt(0);
-				System.out.println(firstDigit + " ones.");	
-				numberString = numberString.substring(1);
-				number = Integer.parseInt(numberString);
-			}
+		int hundreds;
+		int tens;
+		int ones;
+		ones = number % 10;
+		tens = (int)(number % 100) / 10;
+		hundreds = number / 100;
+		System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
 		}
 
 	}
-}
+
